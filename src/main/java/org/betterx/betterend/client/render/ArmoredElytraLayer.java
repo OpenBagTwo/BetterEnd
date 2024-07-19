@@ -56,7 +56,7 @@ public class ArmoredElytraLayer<T extends LivingEntity, M extends EntityModel<T>
             float f, float g, float h, float j, float k, float l
     ) {
         ItemStack itemStack = livingEntity.getItemBySlot(EquipmentSlot.CHEST);
-        if (itemStack.is(Items.ELYTRA)) {
+        if (itemStack.getItem() instanceof BCLElytraItem) {
             ResourceLocation resourceLocation;
             if (livingEntity instanceof AbstractClientPlayer abstractClientPlayer) {
                 final PlayerSkin playerSkin = abstractClientPlayer.getSkin();
