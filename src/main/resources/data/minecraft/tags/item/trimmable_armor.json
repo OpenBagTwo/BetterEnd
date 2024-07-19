@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "betterend:thallasium_boots",
+    "betterend:thallasium_chestplate",
+    "betterend:thallasium_helmet",
+    "betterend:thallasium_leggings",
+    "betterend:terminite_boots",
+    "betterend:terminite_chestplate",
+    "betterend:terminite_helmet",
+    "betterend:terminite_leggings",
+    "betterend:aeternium_boots",
+    "betterend:aeternium_chestplate",
+    "betterend:aeternium_helmet",
+    "betterend:aeternium_leggings",
+    "betterend:elytra_armored"
+  ]
+}

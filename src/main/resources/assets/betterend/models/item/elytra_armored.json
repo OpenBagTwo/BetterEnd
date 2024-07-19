@@ -1,14 +1,74 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "betterend:item/elytra_armored"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "betterend:item/elytra_armored"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "broken": 1
+      },
+      "model": "betterend:item/elytra_armored_broken"
     },
-    "overrides": [
-        {
-            "predicate": {
-                "broken": 1
-            },
-            "model": "betterend:item/elytra_armored_broken"
-        }
-    ]
+    {
+      "model": "betterend:item/trimmed/elytra_armored_quartz_trim",
+      "predicate": {
+        "trim_type": 0.1
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_iron_trim",
+      "predicate": {
+        "trim_type": 0.2
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_netherite_trim",
+      "predicate": {
+        "trim_type": 0.3
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_redstone_trim",
+      "predicate": {
+        "trim_type": 0.4
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_copper_trim",
+      "predicate": {
+        "trim_type": 0.5
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_gold_trim",
+      "predicate": {
+        "trim_type": 0.6
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_emerald_trim",
+      "predicate": {
+        "trim_type": 0.7
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_diamond_trim",
+      "predicate": {
+        "trim_type": 0.8
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_lapis_trim",
+      "predicate": {
+        "trim_type": 0.9
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_amethyst_trim",
+      "predicate": {
+        "trim_type": 1.0
+      }
+    }
+  ]
 }
