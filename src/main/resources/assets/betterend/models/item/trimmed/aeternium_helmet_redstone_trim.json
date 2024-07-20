@@ -1,1 +1,7 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "betterend:item/aeternium_helmet", "layer1": "minecraft:trims/items/helmet_trim_redstone"}}
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "betterend:item/aeternium_helmet",
+        "layer1": "minecraft:trims/items/helmet_trim_redstone"
+    }
+}
