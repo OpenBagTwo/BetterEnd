@@ -1,68 +1,80 @@
 {
-  "parent": "minecraft:item/generated",
-  "overrides": [
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_quartz_trim",
-      "predicate": {
-        "trim_type": 0.1
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_iron_trim",
-      "predicate": {
-        "trim_type": 0.2
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_netherite_trim",
-      "predicate": {
-        "trim_type": 0.3
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_redstone_trim",
-      "predicate": {
-        "trim_type": 0.4
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_copper_trim",
-      "predicate": {
-        "trim_type": 0.5
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_gold_trim",
-      "predicate": {
-        "trim_type": 0.6
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_emerald_trim",
-      "predicate": {
-        "trim_type": 0.7
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_diamond_trim",
-      "predicate": {
-        "trim_type": 0.8
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_lapis_trim",
-      "predicate": {
-        "trim_type": 0.9
-      }
-    },
-    {
-      "model": "betterend:item/trimmed/aeternium_boots_amethyst_trim",
-      "predicate": {
-        "trim_type": 1.0
-      }
+    "overrides": [
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_quartz_trim",
+            "predicate": {
+                "trim_type": 0.1
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_iron_trim",
+            "predicate": {
+                "trim_type": 0.2
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_netherite_trim",
+            "predicate": {
+                "trim_type": 0.3
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_amber_gem_trim",
+            "predicate": {
+                "trim_type": 0.333
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_crystal_shards_trim",
+            "predicate": {
+                "trim_type": 0.334
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_redstone_trim",
+            "predicate": {
+                "trim_type": 0.4
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_copper_trim",
+            "predicate": {
+                "trim_type": 0.5
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_gold_trim",
+            "predicate": {
+                "trim_type": 0.6
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_emerald_trim",
+            "predicate": {
+                "trim_type": 0.7
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_diamond_trim",
+            "predicate": {
+                "trim_type": 0.8
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_lapis_trim",
+            "predicate": {
+                "trim_type": 0.9
+            }
+        },
+        {
+            "model": "betterend:item/trimmed/aeternium_boots_amethyst_trim",
+            "predicate": {
+                "trim_type": 1.0
+            }
+        }
+    ],
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "betterend:item/aeternium_boots"
     }
-  ],
-  "textures": {
-    "layer0": "betterend:item/aeternium_boots"
-  }
 }

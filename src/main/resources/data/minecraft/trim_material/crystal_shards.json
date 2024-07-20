@@ -1,0 +1,9 @@
+{
+  "asset_name": "crystal_shards",
+  "description": {
+    "color": "#F72EFF",
+    "translate": "trim_material.betterend.crystal_shards"
+  },
+  "ingredient": "betterend:crystal_shards",
+  "item_model_index": 0.334
+}
