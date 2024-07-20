@@ -29,6 +29,18 @@
       }
     },
     {
+      "model": "betterend:item/trimmed/elytra_armored_amber_gem_trim",
+      "predicate": {
+        "trim_type": 0.333
+      }
+    },
+    {
+      "model": "betterend:item/trimmed/elytra_armored_crystal_shards_trim",
+      "predicate": {
+        "trim_type": 0.334
+      }
+    },
+    {
       "model": "betterend:item/trimmed/elytra_armored_redstone_trim",
       "predicate": {
         "trim_type": 0.4

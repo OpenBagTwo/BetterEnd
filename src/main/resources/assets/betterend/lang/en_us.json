@@ -1044,6 +1044,8 @@
   "title.config.betterend.generator.structure.replace_pillars": "Use BetterEnd-Style Pillars",
   "title.config.betterend.generator.structure.replace_portal": "Use BetterEnd-Style Portal",
   "title.config.group.betterend.generator": "End Generator",
+  "trim_material.betterend.amber_gem": "Amber Material",
+  "trim_material.betterend.crystal_shards": "Crystal Material",
   "tooltip.armor.crystalite_boots": "Effect: Swiftness I",
   "tooltip.armor.crystalite_chest": "Effect: Dig Speed I",
   "tooltip.armor.crystalite_set": "Set bonus: Regeneration I",
