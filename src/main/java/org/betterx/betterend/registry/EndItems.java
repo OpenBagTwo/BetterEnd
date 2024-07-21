@@ -138,6 +138,7 @@ public class EndItems {
                     0.97D,
                     1.15f,
                     1.15f,
+                    0.2f,
                     true
             )
     );
