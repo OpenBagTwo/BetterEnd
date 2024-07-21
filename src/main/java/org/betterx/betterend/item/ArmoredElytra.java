@@ -32,6 +32,7 @@ public class ArmoredElytra extends BaseArmorItem implements MultiModelItem, Bett
             int durability,
             float defenseDivider,
             float toughnessDivider,
+            float knockbackResistance,
             boolean fireproof
     ) {
         final float defense = material.armorMaterial
@@ -47,7 +48,7 @@ public class ArmoredElytra extends BaseArmorItem implements MultiModelItem, Bett
                                                      EndArmorItem.startAttributeBuilder(
                                                              ArmorSlot.CHESTPLATE_SLOT,
                                                              material,
-                                                             (int) defense, toughness, 0.5f
+                                                             (int) defense, toughness, knockbackResistance
                                                      ).build()
                                              ).rarity(Rarity.EPIC)
                                              .durability(durability);
@@ -65,12 +66,13 @@ public class ArmoredElytra extends BaseArmorItem implements MultiModelItem, Bett
             double movementFactor,
             float defenseDivider,
             float toughnessDivider,
+            float knockbackResistance,
             boolean fireproof
     ) {
         super(
                 material.armorMaterial,
                 Type.CHESTPLATE,
-                defaultSettings(material, durability, defenseDivider, toughnessDivider, fireproof)
+                defaultSettings(material, durability, defenseDivider, toughnessDivider, knockbackResistance, fireproof)
         );
         this.wingTexture = BetterEnd.C.mk("textures/entity/" + name + ".png");
         this.repairItem = repairItem;
