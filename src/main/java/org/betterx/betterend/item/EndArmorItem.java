@@ -36,10 +36,10 @@ public class EndArmorItem extends ArmorItem implements ItemModelProvider {
             ArmorTier tier
     ) {
         return startAttributeBuilder(slot, tier,
-                EndArmorTier.CRYSTALITE.armorMaterial
+                tier.armorMaterial
                         .value()
                         .getDefense(slot.armorType),
-                EndArmorTier.CRYSTALITE.armorMaterial
+                tier.armorMaterial
                         .value()
                         .toughness(),
                 0.0f
@@ -53,40 +53,47 @@ public class EndArmorItem extends ArmorItem implements ItemModelProvider {
             float toughness,
             float knockbackResistance
     ) {
+        EquipmentSlotGroup slotGroup;
+        if (slot == ArmorSlot.HELMET_SLOT) {
+            slotGroup = EquipmentSlotGroup.HEAD;
+        } else if (slot == ArmorSlot.LEGGINGS_SLOT) {
+            slotGroup = EquipmentSlotGroup.LEGS;
+        } else if (slot == ArmorSlot.BOOTS_SLOT) {
+            slotGroup = EquipmentSlotGroup.FEET;
+        } else {
+            slotGroup = EquipmentSlotGroup.CHEST;
+        }
+
         final ItemAttributeModifiers.Builder builder = ItemAttributeModifiers
                 .builder()
                 .add(
-                        Attributes.ARMOR,
-                        new AttributeModifier(
-                                ARMOR_BOOST,
-                                EndArmorTier.CRYSTALITE.armorMaterial
-                                        .value()
-                                        .getDefense(Type.CHESTPLATE) / 1.25f,
-                                AttributeModifier.Operation.ADD_VALUE
-                        ),
-                        EquipmentSlotGroup.CHEST
+                    Attributes.ARMOR,
+                    new AttributeModifier(
+                            ARMOR_BOOST,
+                            defense,
+                            AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    slotGroup
                 )
                 .add(
-                        Attributes.ARMOR_TOUGHNESS,
-                        new AttributeModifier(
-                                TOUGHNESS_BOOST,
-                                EndArmorTier.CRYSTALITE.armorMaterial
-                                        .value()
-                                        .toughness() / 1.25f,
-                                AttributeModifier.Operation.ADD_VALUE
-                        ),
-                        EquipmentSlotGroup.CHEST
+                    Attributes.ARMOR_TOUGHNESS,
+                    new AttributeModifier(
+                            TOUGHNESS_BOOST,
+                            toughness,
+                            AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    slotGroup
                 );
 
         if (knockbackResistance > 0.0f) {
             builder.add(
-                    Attributes.KNOCKBACK_RESISTANCE,
-                    new AttributeModifier(
-                            BASE_KNOCKBACK_RESISTANCE,
-                            knockbackResistance,
-                            AttributeModifier.Operation.ADD_VALUE
-                    ),
-                    EquipmentSlotGroup.MAINHAND
+                Attributes.KNOCKBACK_RESISTANCE,
+                new AttributeModifier(
+                        BASE_KNOCKBACK_RESISTANCE,
+                        knockbackResistance,
+                        AttributeModifier.Operation.ADD_VALUE
+                ),
+                slotGroup
             );
         }
 
