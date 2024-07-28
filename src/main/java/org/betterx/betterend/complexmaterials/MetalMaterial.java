@@ -108,7 +108,6 @@ public class MetalMaterial implements MaterialManager.Material {
                 () -> BlockBehaviour.Properties
                         .ofFullCopy(Blocks.IRON_BLOCK)
                         .mapColor(color),
-                EndItems.makeEndItemSettings(),
                 material,
                 armor,
                 anvilLevel,
@@ -137,7 +136,6 @@ public class MetalMaterial implements MaterialManager.Material {
                         .mapColor(color)
                         .destroyTime(hardness)
                         .explosionResistance(resistance),
-                EndItems.makeEndItemSettings(),
                 material,
                 armor,
                 anvilLevel,
@@ -150,7 +148,6 @@ public class MetalMaterial implements MaterialManager.Material {
             String name,
             boolean hasOre,
             Supplier<BlockBehaviour.Properties> settingsSupplier,
-            Properties itemSettings,
             Tier material,
             ArmorTier armor,
             int anvilLevel,
@@ -170,7 +167,7 @@ public class MetalMaterial implements MaterialManager.Material {
         this.hasOre = hasOre;
         this.name = name;
         this.swordHandleTemplate = swordHandleTemplate;
-        rawOre = hasOre ? EndItems.registerEndItem(name + "_raw", new ModelProviderItem(itemSettings)) : null;
+        rawOre = hasOre ? EndItems.registerEndItem(name + "_raw", new ModelProviderItem(EndItems.makeEndItemSettings())) : null;
         ore = hasOre ? EndBlocks.registerBlock(name + "_ore", new BaseOreBlock(() -> rawOre, 1, 3, 1)) : null;
         alloyingOre = hasOre ? TagManager.ITEMS.makeTag(BetterEnd.C, name + "_alloying") : null;
 
@@ -192,8 +189,8 @@ public class MetalMaterial implements MaterialManager.Material {
         bulb_lantern = EndBlocks.registerBlock(name + "_bulb_lantern", new BulbVineLanternBlock(lanternProperties));
         bulb_lantern_colored = new ColoredMaterial(BulbVineLanternColoredBlock::new, bulb_lantern, false);
 
-        nugget = EndItems.registerEndItem(name + "_nugget", new ModelProviderItem(itemSettings));
-        ingot = EndItems.registerEndItem(name + "_ingot", new ModelProviderItem(itemSettings));
+        nugget = EndItems.registerEndItem(name + "_nugget", new ModelProviderItem(EndItems.makeEndItemSettings()));
+        ingot = EndItems.registerEndItem(name + "_ingot", new ModelProviderItem(EndItems.makeEndItemSettings()));
 
         shovelHead = EndItems.registerEndItem(name + "_shovel_head");
         pickaxeHead = EndItems.registerEndItem(name + "_pickaxe_head");
@@ -202,30 +199,30 @@ public class MetalMaterial implements MaterialManager.Material {
         swordBlade = EndItems.registerEndItem(name + "_sword_blade");
         swordHandle = EndItems.registerEndItem(name + "_sword_handle");
 
-        shovel = EndItems.registerEndTool(name + "_shovel", new BaseShovelItem(material, 1.5F, -3.0F, itemSettings));
-        sword = EndItems.registerEndTool(name + "_sword", new BaseSwordItem(material, 3, -2.4F, itemSettings));
-        pickaxe = EndItems.registerEndTool(name + "_pickaxe", new EndPickaxe(material, 1, -2.8F, itemSettings));
-        axe = EndItems.registerEndTool(name + "_axe", new BaseAxeItem(material, 6.0F, -3.0F, itemSettings));
-        hoe = EndItems.registerEndTool(name + "_hoe", new BaseHoeItem(material, -3, 0.0F, itemSettings));
+        shovel = EndItems.registerEndTool(name + "_shovel", new BaseShovelItem(material, 1.5F, -3.0F, EndItems.makeEndItemSettings()));
+        sword = EndItems.registerEndTool(name + "_sword", new BaseSwordItem(material, 3, -2.4F, EndItems.makeEndItemSettings()));
+        pickaxe = EndItems.registerEndTool(name + "_pickaxe", new EndPickaxe(material, 1, -2.8F, EndItems.makeEndItemSettings()));
+        axe = EndItems.registerEndTool(name + "_axe", new BaseAxeItem(material, 6.0F, -3.0F, EndItems.makeEndItemSettings()));
+        hoe = EndItems.registerEndTool(name + "_hoe", new BaseHoeItem(material, -3, 0.0F, EndItems.makeEndItemSettings()));
         hammer = EndItems.registerEndTool(
                 name + "_hammer",
-                new EndHammerItem(material, 5.0F, -3.2F, 0.3f, itemSettings)
+                new EndHammerItem(material, 5.0F, -3.2F, 0.3f, EndItems.makeEndItemSettings())
         );
 
         forgedPlate = EndItems.registerEndItem(name + "_forged_plate");
         helmet = EndItems.registerEndItem(
                 name + "_helmet",
-                new EndArmorItem(armor, ArmorSlot.HELMET_SLOT, itemSettings)
+                new EndArmorItem(armor, ArmorSlot.HELMET_SLOT, EndItems.makeEndItemSettings())
         );
         chestplate = EndItems.registerEndItem(
                 name + "_chestplate",
-                new EndArmorItem(armor, ArmorSlot.CHESTPLATE_SLOT, itemSettings)
+                new EndArmorItem(armor, ArmorSlot.CHESTPLATE_SLOT, EndItems.makeEndItemSettings())
         );
         leggings = EndItems.registerEndItem(
                 name + "_leggings",
-                new EndArmorItem(armor, ArmorSlot.LEGGINGS_SLOT, itemSettings)
+                new EndArmorItem(armor, ArmorSlot.LEGGINGS_SLOT, EndItems.makeEndItemSettings())
         );
-        boots = EndItems.registerEndItem(name + "_boots", new EndArmorItem(armor, ArmorSlot.BOOTS_SLOT, itemSettings));
+        boots = EndItems.registerEndItem(name + "_boots", new EndArmorItem(armor, ArmorSlot.BOOTS_SLOT, EndItems.makeEndItemSettings()));
 
         anvilBlock = EndBlocks.registerBlock(
                 name + "_anvil",
