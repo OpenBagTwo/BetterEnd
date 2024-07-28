@@ -1,5 +1,6 @@
 package org.betterx.betterend.item;
 
+import net.minecraft.world.entity.EquipmentSlot;
 import org.betterx.bclib.interfaces.ItemModelProvider;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.item.material.EndArmorTier;
@@ -53,16 +54,7 @@ public class EndArmorItem extends ArmorItem implements ItemModelProvider {
             float toughness,
             float knockbackResistance
     ) {
-        EquipmentSlotGroup slotGroup;
-        if (slot == ArmorSlot.HELMET_SLOT) {
-            slotGroup = EquipmentSlotGroup.HEAD;
-        } else if (slot == ArmorSlot.LEGGINGS_SLOT) {
-            slotGroup = EquipmentSlotGroup.LEGS;
-        } else if (slot == ArmorSlot.BOOTS_SLOT) {
-            slotGroup = EquipmentSlotGroup.FEET;
-        } else {
-            slotGroup = EquipmentSlotGroup.CHEST;
-        }
+        EquipmentSlotGroup slotGroup = EquipmentSlotGroup.bySlot(slot.armorType.getSlot());
 
         final ItemAttributeModifiers.Builder builder = ItemAttributeModifiers
                 .builder()
