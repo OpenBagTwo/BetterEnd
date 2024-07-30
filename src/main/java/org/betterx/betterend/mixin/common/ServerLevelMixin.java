@@ -1,5 +1,6 @@
 package org.betterx.betterend.mixin.common;
 
+import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.world.generator.GeneratorOptions;
@@ -25,6 +26,7 @@ import net.minecraft.world.level.storage.LevelStorageSource.LevelStorageAccess;
 import net.minecraft.world.level.storage.ServerLevelData;
 import net.minecraft.world.level.storage.WritableLevelData;
 
+import org.betterx.wover.common.generator.api.biomesource.BiomeSourceWithConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -83,7 +85,9 @@ public abstract class ServerLevelMixin extends Level {
             RandomSequences randomSequences,
             CallbackInfo ci
     ) {
-        TerrainGenerator.onServerLevelInit(ServerLevel.class.cast(this), levelStem, seed);
+        if (levelStem.generator().getBiomeSource() instanceof BiomeSourceWithConfig) {
+            TerrainGenerator.onServerLevelInit(ServerLevel.class.cast(this), levelStem, seed);
+        }
     }
 
     @ModifyArg(method = "tickPrecipitation", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerLevel;setBlockAndUpdate(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z"))
