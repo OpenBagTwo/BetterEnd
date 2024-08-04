@@ -55,15 +55,8 @@ public class EndStoneSmelter extends BaseBlockWithEntity.Stone implements Alloyi
         registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LIT, false));
     }
 
-    @SuppressWarnings("deprecation")
-    public InteractionResult use(
-            BlockState state,
-            Level world,
-            BlockPos pos,
-            Player player,
-            InteractionHand hand,
-            BlockHitResult hit
-    ) {
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
         if (world.isClientSide) {
             return InteractionResult.SUCCESS;
         } else {
