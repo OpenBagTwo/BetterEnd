@@ -822,13 +822,14 @@
 	"item.betterend.cave_pumpkin_pie": "Tarta de Calabaza de Cueva",
 	
 	"item.betterend.music_disc_strange_and_alien": "§bDisco Musical§r",
-	"item.betterend.music_disc_strange_and_alien.desc": "§5Firel§r - §fStrange And Alien§r",
 	"item.betterend.music_disc_grasping_at_stars": "§bDisco Musical§r",
-	"item.betterend.music_disc_grasping_at_stars.desc": "§5Firel§r - §fGrasping At Stars§r",
 	"item.betterend.music_disc_endseeker": "§bDisco Musical§r",
-	"item.betterend.music_disc_endseeker.desc": "§5Firel§r - §fEndseeker§r",
 	"item.betterend.music_disc_eo_dracona": "§bDisco Musical§r",
-	"item.betterend.music_disc_eo_dracona.desc": "§5Firel§r - §fEo Dracona§r",
+
+	"jukebox_song.betterend.strange_and_alien": "§5Firel§r - §fStrange And Alien§r",
+	"jukebox_song.betterend.grasping_at_stars": "§5Firel§r - §fGrasping At Stars§r",
+	"jukebox_song.betterend.endseeker": "§5Firel§r - §fEndseeker§r",
+	"jukebox_song.betterend.eo_dracona": "§5Firel§r - §fEo Dracona§r",
 	
 	"block.betterend.hydralux_petal_block_amber": "Bloque de Pétalo Ámbar",
 	"block.betterend.hydralux_petal_block_beige": "Bloque de Pétalo Beige",

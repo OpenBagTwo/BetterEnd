@@ -827,13 +827,14 @@
   "item.betterend.cave_pumpkin_pie": "Torta de Abóbora de Caverna",
 
   "item.betterend.music_disc_strange_and_alien": "§bDisco de Música§r",
-  "item.betterend.music_disc_strange_and_alien.desc": "§5Firel§r - §fEstranho e Alienígena§r",
   "item.betterend.music_disc_grasping_at_stars": "§bDisco de Música§r",
-  "item.betterend.music_disc_grasping_at_stars.desc": "§5Firel§r - §fAgarrando-se às Estrelas§r",
   "item.betterend.music_disc_endseeker": "§bDisco de Música§r",
-  "item.betterend.music_disc_endseeker.desc": "§5Firel§r - §fCaçador do End§r",
   "item.betterend.music_disc_eo_dracona": "§bDisco de Música§r",
-  "item.betterend.music_disc_eo_dracona.desc": "§5Firel§r - §fEo Dracona§r",
+
+  "jukebox_song.betterend.strange_and_alien": "§5Firel§r - §fEstranho e Alienígena§r",
+  "jukebox_song.betterend.grasping_at_stars": "§5Firel§r - §fAgarrando-se às Estrelas§r",
+  "jukebox_song.betterend.endseeker": "§5Firel§r - §fCaçador do End§r",
+  "jukebox_song.betterend.eo_dracona": "§5Firel§r - §fEo Dracona§r",
 
   "block.betterend.hydralux_petal_block_amber": "Bloco de Pétalas Âmbar",
   "block.betterend.hydralux_petal_block_beige": "Bloco de pétalas bege",
