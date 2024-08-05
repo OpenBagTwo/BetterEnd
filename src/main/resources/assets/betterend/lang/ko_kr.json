@@ -823,13 +823,14 @@
 	"item.betterend.cave_pumpkin_pie": "동굴 호박 파이",
 	
 	"item.betterend.music_disc_strange_and_alien": "§b음반§r",
-	"item.betterend.music_disc_strange_and_alien.desc": "§5Firel§r - §fStrange And Alien§r",
 	"item.betterend.music_disc_grasping_at_stars": "§b음반§r",
-	"item.betterend.music_disc_grasping_at_stars.desc": "§5Firel§r - §fGrasping At Stars§r",
 	"item.betterend.music_disc_endseeker": "§b음반§r",
-	"item.betterend.music_disc_endseeker.desc": "§5Firel§r - §fEndseeker§r",
 	"item.betterend.music_disc_eo_dracona": "§b음반§r",
-	"item.betterend.music_disc_eo_dracona.desc": "§5Firel§r - §fEo Dracona§r",
+
+	"jukebox_song.betterend.strange_and_alien": "§5Firel§r - §fStrange And Alien§r",
+	"jukebox_song.betterend.grasping_at_stars": "§5Firel§r - §fGrasping At Stars§r",
+	"jukebox_song.betterend.endseeker": "§5Firel§r - §fEndseeker§r",
+	"jukebox_song.betterend.eo_dracona": "§5Firel§r - §fEo Dracona§r",
 	
 	"block.betterend.hydralux_petal_block_amber": "호박색 꽃잎 블록",
 	"block.betterend.hydralux_petal_block_beige": "베이지색 꽃잎 블록",
