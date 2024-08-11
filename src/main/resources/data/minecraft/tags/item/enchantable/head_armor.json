@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "betterend:thallasium_helmet",
+    "betterend:terminite_helmet",
+    "betterend:aeternium_helmet",
+    "betterend:crystalite_helmet"
+  ]
+}
