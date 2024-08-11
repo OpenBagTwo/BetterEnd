@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "betterend:thallasium_boots",
+    "betterend:terminite_boots",
+    "betterend:aeternium_boots",
+    "betterend:crystalite_boots"
+  ]
+}
