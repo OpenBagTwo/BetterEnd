@@ -1,8 +1,5 @@
 package org.betterx.datagen.betterend.tags;
 
-import net.minecraft.tags.TagKey;
-import org.betterx.bclib.blocks.BaseBarsBlock;
-import org.betterx.bclib.blocks.BaseChainBlock;
 import org.betterx.betterend.complexmaterials.MaterialManager;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndTags;
@@ -10,7 +7,6 @@ import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.datagen.betterend.worldgen.EndBiomesProvider;
 import org.betterx.wover.core.api.ModCore;
 import org.betterx.wover.datagen.api.WoverTagProvider;
-import org.betterx.wover.tag.api.TagManager;
 import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
 import org.betterx.wover.tag.api.predefined.CommonBlockTags;
 
@@ -23,9 +19,6 @@ public class BlockTagProvider extends WoverTagProvider.ForBlocks {
     public BlockTagProvider(ModCore modCore) {
         super(modCore, Set.of(EndTags.INCORRECT_FOR_AETERNIUM_TOOL));
     }
-
-    private static final TagKey<Block> BARS_TAG = TagManager.BLOCKS.makeCommonTag("bars");
-    private static final TagKey<Block> CHAIN_TAG = TagManager.BLOCKS.makeCommonTag("chains");
 
     private static void addEndGround(TagBootstrapContext<Block> context, Block bl) {
         context.add(CommonBlockTags.END_STONES, bl);
@@ -80,15 +73,5 @@ public class BlockTagProvider extends WoverTagProvider.ForBlocks {
         for (Block charnia : charnias) {
             context.add(EndTags.BONEMEAL_SOURCE_WATER_GRASS, charnia);
         }
-
-        EndBlocks.getModBlocks().forEach(block -> {
-            if (block instanceof BaseBarsBlock) {
-                context.add(BARS_TAG, block);
-            }
-            if (block instanceof BaseChainBlock) {
-                context.add(CHAIN_TAG, block);
-            }
-        });
-
     }
 }

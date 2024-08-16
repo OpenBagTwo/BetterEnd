@@ -93,6 +93,11 @@ public class MetalMaterial implements MaterialManager.Material {
     public final int anvilLevel;
     public final TagKey<Item> anvilTools;
 
+    private static final TagKey<Block> BARS_BLOCK_TAG = TagManager.BLOCKS.makeCommonTag("bars");
+    private static final TagKey<Item> BARS_ITEM_TAG = TagManager.ITEMS.makeCommonTag("bars");
+    private static final TagKey<Block> CHAIN_BLOCK_TAG = TagManager.BLOCKS.makeCommonTag("chains");
+    private static final TagKey<Item> CHAINS_ITEM_TAG = TagManager.ITEMS.makeCommonTag("chains");
+
     public static MetalMaterial makeNormal(
             String name,
             MapColor color,
@@ -473,12 +478,16 @@ public class MetalMaterial implements MaterialManager.Material {
     @Override
     public void registerBlockTags(TagBootstrapContext<Block> context) {
         context.add(BlockTags.ANVIL, anvilBlock);
+        context.add(BARS_BLOCK_TAG, bars);
+        context.add(CHAIN_BLOCK_TAG, chain);
         context.add(BlockTags.BEACON_BASE_BLOCKS, block);
         context.add(BlockTags.DRAGON_IMMUNE, ore, bars);
     }
 
     @Override
     public void registerItemTags(ItemTagBootstrapContext context) {
+        context.add(BARS_ITEM_TAG, bars.asItem());
+        context.add(CHAINS_ITEM_TAG, chain.asItem());
         context.add(ItemTags.BEACON_PAYMENT_ITEMS, ingot);
         if (alloyingOre != null) {
             context.add(alloyingOre, ore.asItem(), rawOre);
