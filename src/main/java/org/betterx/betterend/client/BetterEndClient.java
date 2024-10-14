@@ -8,6 +8,7 @@ import org.betterx.betterend.config.screen.ConfigScreen;
 import org.betterx.betterend.events.ItemTooltipCallback;
 import org.betterx.betterend.interfaces.MultiModelItem;
 import org.betterx.betterend.item.CrystaliteArmor;
+import org.betterx.betterend.item.CrystaliteElytra;
 import org.betterx.betterend.registry.*;
 import org.betterx.betterend.world.generator.GeneratorOptions;
 
@@ -65,7 +66,9 @@ public class BetterEndClient implements ClientModInitializer {
 
     public static void registerTooltips() {
         ItemTooltipCallback.EVENT.register((player, stack, context, lines) -> {
-            if (stack.getItem() instanceof CrystaliteArmor) {
+            if ((stack.getItem() instanceof CrystaliteArmor)
+                || (stack.getItem() instanceof CrystaliteElytra)
+            ) {
                 boolean hasSet = false;
                 if (player != null) {
                     hasSet = CrystaliteArmor.hasFullSet(player);

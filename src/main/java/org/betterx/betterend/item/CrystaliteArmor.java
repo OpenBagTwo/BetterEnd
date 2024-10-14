@@ -22,7 +22,10 @@ public class CrystaliteArmor extends BaseArmorItem {
 
     public static boolean hasFullSet(LivingEntity owner) {
         for (ItemStack armorStack : owner.getArmorSlots()) {
-            if (!(armorStack.getItem() instanceof CrystaliteArmor)) {
+            if (
+                !(armorStack.getItem() instanceof CrystaliteArmor)
+                    && !(armorStack.getItem() instanceof CrystaliteElytra)
+            ) {
                 return false;
             }
         }
